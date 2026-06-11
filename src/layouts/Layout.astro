@@ -1,0 +1,34 @@
+---
+import "../styles/global.css"; /* <-- Tambahkan baris ini di sini */
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="AyamBacok - Supplier Ayam Potong Segar, Higienis, dan Halal." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-gray-50 text-gray-800 font-sans">
+		<slot />
+        
+        <!-- Floating WhatsApp Button -->
+        <a 
+            href="https://wa.me/6281234567890?text=Halo%20Admin%20AyamBacok,%20saya%20mau%20tanya-tanya%20dulu%20dong." 
+            target="_blank"
+            class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 hover:scale-110 transition-all z-50 flex items-center justify-center"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.277.042-.615.064-1.743-.404-1.428-.59-2.355-2.05-2.388-2.095-.034-.044-.57-.761-.57-1.45 0-.69.361-1.03.491-1.168.13-.138.282-.172.376-.172.095 0 .19.002.273.006.088.004.202-.034.316.241.121.293.407.994.444 1.07.038.076.063.165.016.258-.046.094-.07.151-.14.238-.07.087-.146.186-.208.238-.07.058-.142.122-.057.268.084.146.376.623.805 1.006.552.493 1.02.651 1.166.726.146.074.232.064.318-.035.086-.099.37-.432.468-.58.099-.148.196-.124.328-.074.133.05 1.126.541 1.306.634.18.093.299.141.343.218.044.078.044.447-.1.852z"/>
+            </svg>
+        </a>
+	</body>
+</html>
